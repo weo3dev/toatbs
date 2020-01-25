@@ -1,23 +1,48 @@
 button {
-		align-items: center ;
-		background-color: #f0f0f0 ;
-		border: 1px solid #e0e0e0 ;
-		border-radius: 5px 5px 5px 5px ;
-		color: #ff3366 ;
-		cursor: pointer ;
-		display: flex ;
-		font-family: inherit ; // Needed for Button
-		font-size: inherit ; // Needed for Button
-		margin-right: 10px ;
-		padding: 10px 15px 10px 12px ;
+	align-items: center;
+	background-color: var(--color-white);
+	border: none;
+	border-radius: 3px;
+	color: var(--color-black);
+	cursor: pointer;
+	display: inline-flex;
+	flex-direction: column;
+	font-family: inherit; // Needed for Button
+	font-size: inherit; // Needed for Button
+	mix-blend-mode: screen;
+	padding: 0.5em 1em;
 
-		// ONLY Chrome seems to show a beefy outline by default; as such, in order
-		// to get the focus styling more consistent, we override the outline
-        // and then use box-shadow. This renders the same in all major desktop browsers.
-        
-		&:focus,
-		&:active {
-			outline: none ;
-			box-shadow: 0px 0px 2px 4px #ff3366 ;
-		}
+	// ONLY Chrome seems to show a beefy outline by default; as such, in order
+	// to get the focus styling more consistent, we override the outline
+	// and then use box-shadow. This renders the same in all major desktop browsers.
+
+	&:focus,
+	&:active {
+		outline: none ;
+		box-shadow: 0px 0px 2px 4px var(--color-gray);
 	}
+
+	&.btn-primary {
+		background-color: var(--color-primary);
+	}
+
+	&.btn-secondary {
+		background-color: var(--color-secondary);
+	}
+
+	&.btn-success {
+		background-color: var(--color-success);
+	}
+	&.btn-danger {
+		background-color: var(--color-danger);
+	}
+	&.btn-warning {
+		background-color: var(--color-warning);
+	}
+	&.btn-info {
+		background-color: var(--color-info);
+	}
+	&.btn-light {
+		background-color: var(--color-light);
+	}
+}

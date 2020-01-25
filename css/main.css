@@ -128,22 +128,64 @@ summary {
   display: list-item;
 }
 
+:root {
+  --color-primary: #369;
+  --color-secondary: #348899;
+  --color-white: #efefef;
+  --color-black: #232323;
+  --color-gray: #676767;
+  --color-success: #339933;
+  --color-danger: #ff3300;
+  --color-warning: #ffaa33;
+  --color-info: skyblue;
+  --color-light: var(--color-white);
+}
+
+.buttonGroup {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-gap: 1rem;
+}
+
 button {
   align-items: center;
-  background-color: #f0f0f0;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px 5px 5px 5px;
-  color: #ff3366;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 3px;
+  color: var(--color-black);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
+  flex-direction: column;
   font-family: inherit;
   font-size: inherit;
-  margin-right: 10px;
-  padding: 10px 15px 10px 12px;
+  mix-blend-mode: screen;
+  padding: 0.5em 1em;
 }
 button:focus, button:active {
   outline: none;
-  box-shadow: 0px 0px 2px 4px #ff3366;
+  box-shadow: 0px 0px 2px 4px var(--color-gray);
+}
+button.btn-primary {
+  background-color: var(--color-primary);
+}
+button.btn-secondary {
+  background-color: var(--color-secondary);
+}
+button.btn-success {
+  background-color: var(--color-success);
+}
+button.btn-danger {
+  background-color: var(--color-danger);
+}
+button.btn-warning {
+  background-color: var(--color-warning);
+}
+button.btn-info {
+  background-color: var(--color-info);
+}
+button.btn-light {
+  background-color: var(--color-light);
 }
 
 /*# sourceMappingURL=main.css.map */
