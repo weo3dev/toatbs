@@ -1,0 +1,23 @@
+button {
+		align-items: center ;
+		background-color: #f0f0f0 ;
+		border: 1px solid #e0e0e0 ;
+		border-radius: 5px 5px 5px 5px ;
+		color: #ff3366 ;
+		cursor: pointer ;
+		display: flex ;
+		font-family: inherit ; // Needed for Button
+		font-size: inherit ; // Needed for Button
+		margin-right: 10px ;
+		padding: 10px 15px 10px 12px ;
+
+		// ONLY Chrome seems to show a beefy outline by default; as such, in order
+		// to get the focus styling more consistent, we override the outline
+        // and then use box-shadow. This renders the same in all major desktop browsers.
+        
+		&:focus,
+		&:active {
+			outline: none ;
+			box-shadow: 0px 0px 2px 4px #ff3366 ;
+		}
+	}
