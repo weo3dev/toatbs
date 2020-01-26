@@ -1,0 +1,10 @@
+// columns will be a mixin
+// take whatever number then do
+
+// WIP
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
